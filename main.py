@@ -63,9 +63,6 @@ root.title("Dev_@ladinh production                     Text Editor App")
 text = tk.Text(root, wrap="word", width=50, height=80)
 text.pack(side=tk.RIGHT, padx=5, pady=5)
 
-menu_bar = tk.Menu(root)
-root.config(menu=menu_bar)
-
 exit_button = tk.Button(root, text="\n    Exit   ", command=exit_app, bg="green")
 exit_button.place(x=50, y=450)
 
