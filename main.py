@@ -1,5 +1,5 @@
 # Dev_@ladinh production
-# text_editor app
+# text_editor app, this app mainly entails a typical text editor app which you can use to write and store your data inform of notes
 
 import tkinter as tk
 from tkinter import filedialog
@@ -52,30 +52,30 @@ def delete_file():
         new_file()
         root.title("Text Editor")
     else:
-        print("No file to delete.")
+        print("No Note to delete.")
 
 root = tk.Tk()
 root.geometry('550x500')
 root.resizable(False, False)
-root.config(bg="blue")
-root.title("Dev_@ladinh production                     Text Editor App")
+root.config(bg="pink")
+root.title(" Dev_@ladinh production                     Note Editor App")
 
 text = tk.Text(root, wrap="word", width=50, height=80)
 text.pack(side=tk.RIGHT, padx=5, pady=5)
 
-exit_button = tk.Button(root, text="\n    Exit   ", command=exit_app, bg="green")
+exit_button = tk.Button(root, text="\n    EXIT   ", command=exit_app, bg="green")
 exit_button.place(x=50, y=450)
 
-new_window_button = tk.Button(root, text=" New Editor \nWindow   ", command=new_file, bg="yellow")
+new_window_button = tk.Button(root, text=" New Note \nWindow   ", command=new_file, bg="yellow")
 new_window_button.place(x=10, y=10)
 
-save_file_button = tk.Button(root, text="  \nSave the file ", command=save_file, bg="green")
+save_file_button = tk.Button(root, text="  \nSave the Note ", command=save_file, bg="green")
 save_file_button.place(x=10, y=60)
 
-open_file_button = tk.Button(root, text="  \nOpen a file   ", command=open_file, bg="green")
+open_file_button = tk.Button(root, text="  \nOpen a file Note   ", command=open_file, bg="green")
 open_file_button.place(x=10, y=110)
 
-delete_file_button = tk.Button(root, text="  \nDelete the    \nfile   ", command=delete_file, bg="green")
+delete_file_button = tk.Button(root, text="  \nDelete the    \Note   ", command=delete_file, bg="green")
 delete_file_button.place(x=10, y=160)
 
 root.mainloop()
