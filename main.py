@@ -52,7 +52,7 @@ def delete_file():
         new_file()
         root.title("Text Editor")
     else:
-        print("No Note to delete.")
+        print("No note file to delete.")
 
 root = tk.Tk()
 root.geometry('550x500')
