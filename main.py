@@ -1,4 +1,3 @@
-# Dev_@ladinh production
 # text_editor app, this app mainly entails a typical text editor app which you can use to write and store your data inform of notes
 
 import tkinter as tk
@@ -26,7 +25,7 @@ def save_file():
         
 def save_file_as():
     global current_file
-    initial_dir = "E:/Denno/DNI Documents/my text editor notes"
+    initial_dir = "D:/Denno/DNI Documents/my text editor notes"
     file_path = filedialog.asksaveasfilename(initialdir=initial_dir, defaultextension=".txt", filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
     if file_path:
         with open(file_path, "w") as file:
@@ -36,7 +35,7 @@ def save_file_as():
         
 def open_file():
     global current_file
-    initial_dir = "E:/Denno/DNI Documents/my text editor notes"
+    initial_dir = "D:/Denno/DNI Documents/my text editor notes"
     file_path = filedialog.askopenfilename(initialdir=initial_dir, defaultextension=".txt", filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
     if file_path:
         with open(file_path, "r") as file:
@@ -50,9 +49,9 @@ def delete_file():
     if current_file and os.path.exists(current_file):
         os.remove(current_file)
         new_file()
-        root.title("Text Editor")
+        root.title("Text Editor App")
     else:
-        print("No note file to delete.")
+        print("No Note file to delete.")
 
 root = tk.Tk()
 root.geometry('550x500')
@@ -66,16 +65,16 @@ text.pack(side=tk.RIGHT, padx=5, pady=5)
 exit_button = tk.Button(root, text="\n    EXIT   ", command=exit_app, bg="green")
 exit_button.place(x=50, y=450)
 
-new_window_button = tk.Button(root, text=" New Note \nWindow   ", command=new_file, bg="yellow")
+new_window_button = tk.Button(root, text=" New Note \Page   ", command=new_file, bg="yellow")
 new_window_button.place(x=10, y=10)
 
 save_file_button = tk.Button(root, text="  \nSave the Note ", command=save_file, bg="green")
 save_file_button.place(x=10, y=60)
 
-open_file_button = tk.Button(root, text="  \nOpen a file Note   ", command=open_file, bg="green")
+open_file_button = tk.Button(root, text="  \nOpen a Note file  ", command=open_file, bg="green")
 open_file_button.place(x=10, y=110)
 
-delete_file_button = tk.Button(root, text="  \nDelete the    \Note   ", command=delete_file, bg="green")
+delete_file_button = tk.Button(root, text="  \nDelete Note    \file   ", command=delete_file, bg="green")
 delete_file_button.place(x=10, y=160)
 
 root.mainloop()
