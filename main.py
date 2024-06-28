@@ -1,11 +1,9 @@
 # text_editor app, this app mainly entails a typical text editor app which you can use to write and store your data inform of notes
-
 import tkinter as tk
 from tkinter import filedialog
 import os
 
 current_file = None
-
 def new_file():
     text.delete("1.0", tk.END)
     global current_file
@@ -25,7 +23,8 @@ def save_file():
         
 def save_file_as():
     global current_file
-    initial_dir = "D:/Denno/DNI Documents/my text editor notes"
+    # to add another route for the folder
+    initial_dir = "folder name"
     file_path = filedialog.asksaveasfilename(initialdir=initial_dir, defaultextension=".txt", filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
     if file_path:
         with open(file_path, "w") as file:
